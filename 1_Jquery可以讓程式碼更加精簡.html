@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 60px;
+            font-size: 18pt;
+            color: #999;
+        }
+        h1{
+            font-size: 28pt;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Jquery page</h1>
+    <p id="msg">wait ...</p>
+    <p id="exp_href">wait ...</p>
+    
+    <input type="text" id="text1" value="Defualt">
+    <button id="btn1">Click</button>
+    
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+
+    <script>
+        $("#msg").text("此為利用Jquery顯示的文字。")
+        $("#exp_href").html('這是<a href="https://www.google.com">Link</a>的範例')
+        $("#btn1").click(function(){
+            var STR =  $("#text1").val()
+            $("#msg").text('你輸入了 '+ STR)
+        })
+    </script>
+</body>
+</html>

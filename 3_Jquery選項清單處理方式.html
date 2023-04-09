@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 60px;
+            font-size: 18pt;
+            color: #999;
+        }
+        h1{
+            font-size: 28pt;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Jquery page</h1>
+    <p id="msg">input text...</p>
+    <select name="" id="sel1" size="5" multiple>
+
+        <option value="Windows">Windows</option>
+        <option value="MacOS">MacOS</option>
+        <option value="Linux">Linux</option>
+        <option value="Android">Android</option>
+        <option value="iOS">iOS</option>
+    </select>
+
+    <button id="btn1">Click</button>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $("#btn1").click(function(){
+            var msg = 'selected: ';
+            $("#sel1 option:selected").each(function(){
+
+                msg += $(this).val() + " ";
+            })
+            $("#msg").text(msg)
+        })
+    </script>
+</body>
+</html>
